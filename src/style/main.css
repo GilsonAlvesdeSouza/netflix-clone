@@ -1,0 +1,136 @@
+/* scripts*/
+:root {
+    --red: #e50914;
+    --black: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* base elements */
+body {
+    background: var(--black);
+    font-family: 'Liberation Mono', Times, Serif;
+    color: white;
+}
+
+header .container {
+    margin: 0em 2em 0em 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+
+header .logo {
+    color: var(--red);
+    font-family: 'monospace', Serif;
+    font-size: 2.5em;
+    width: 270px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 0.625em;
+    align-content: end;
+}
+
+header nav a:hover {
+    color: #FFF;
+}
+
+/* scripts movie */
+main .main-movie {
+    font-size: 1em;
+    background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50) 100%), url('../img/underwood4.jpg');
+    height: 35em;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+main .main-movie .container {
+    margin: 0em 2em 0em 2em;
+    width: 80%;
+}
+
+main .main-movie .title {
+    font-size: 2.5em;
+    margin-top: 15%;
+}
+
+main .main-movie .description {
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+main .buttons .button-play, .button-info {
+    font-size: 1em;
+    font-weight: 700;
+    border: none;
+    padding: 0.9375em;
+    margin-right: 0.9375em;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+main .buttons .button-play i, .button-info i {
+    margin-right: 10px;
+}
+
+main .button-play {
+    background-color: white;
+    color: black;
+}
+
+main .button-play:hover {
+    background-color: #c5c4c4;
+}
+
+main .button-info {
+    background-color: rgba(109, 109, 110, 0.7);;
+    color: white;
+}
+
+main .button-info:hover {
+    background-color: #403e3e;
+}
+
+.movie-box {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.movie-corousel{
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 700px) {
+    header .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .buttons .button-play, .button-info {
+        margin-top: 10px;
+        width: 250px;
+
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    main .main-movie .description {
+        width: 50%;
+    }
+}
+
